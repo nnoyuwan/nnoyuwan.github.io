@@ -24,6 +24,8 @@ header:
       # @end locale config
     url: /archive.html
 
+
+
   - titles:
       # @start locale config
       en      : &EN       About
@@ -49,20 +51,18 @@ header:
       # @end locale config
     url: /about.html
 
-    sidebar:
-      nav: docs-en
+docs-en:
+- title:      Start
+  children:
+    - title:  Quick Start
+      # url:    /docs/en/quick-start
+      url:    https://www.zhihu.com/question/20223939
+    - title:  Structure
+      url:    /docs/en/structure
 
-  docs-en:
-  - title:      Start
-    children:
-      - title:  Quick Start
-        url:    /docs/en/quick-start
-      - title:  Structure
-        url:    /docs/en/structure
-      ...
-  - title:      Customization
-    children:
-      - title:  Configuration
-        url:    /docs/en/configuration
-      - title:  Navigation
-        url:    /docs/en/navigation
+- title:      Customization
+  children:
+    - title:  Configuration
+      url:    /docs/en/configuration
+    - title:  Navigation
+      url:    /docs/en/navigation
