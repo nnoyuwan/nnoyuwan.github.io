@@ -3,7 +3,7 @@ title: python中yield的用法详解
 tags: python
 ---
 
-### yield可以看做“return”
+### 一、yield可以看做“return”
 
 普通的return是什么意思，就是在程序中返回某个值，返回之后程序就不再往下运行了
 
@@ -44,7 +44,7 @@ res: None		print(next(g))
 
 **带yield的函数是一个生成器，而不是一个函数了，这个生成器有一个函数就是next函数，next就相当于“下一步”生成哪个数，这一次的next开始的地方是接着上一次的next停止的地方执行的，所以调用next的时候，生成器并不会从foo函数的开始执行，只是接着上一步停止的地方开始，然后遇到yield后，return出要生成的数，此步就结束。**
 
-### send()函数
+### 二、send()函数
 
 ```python
 def foo():
@@ -80,7 +80,7 @@ res: 7 print(g.send(7))
 
 7. 程序执行再次遇到yield关键字，yield会返回后面的值后，程序再次暂停，直到再次调用next方法或send方法。
 
-
+### 三、生成器的作用：
 
 这就结束了，说一下，为什么用这个生成器，是因为如果用List的话，会占用更大的空间，比如说取0,1,2,3,4,5,6............1000
 
@@ -131,3 +131,6 @@ for n in xrange(1000):
 ```
 
 其中要注意的是<font color='red'>python3时已经没有xrange()了，在python3中，range()就是xrange()了</font>，你可以在python3中查看range()的类型，它已经是个<class 'range'>了，而不是一个list了，毕竟这个是需要优化的。 
+
+
+
